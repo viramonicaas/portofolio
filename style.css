@@ -10,9 +10,9 @@
 }
 :root {
     --bg-color: rgb(221, 187, 192);
-    --second-bg-color: rgb(226, 140, 226);
-    --text-color: rgb(139, 7, 111);
-    --main-color: rgb(127, 15, 147);
+    --second-bg-color: rgb(214, 226, 140);
+    --text-color: rgb(139, 7, 99);
+    --main-color: rgb(81, 125, 9);
 }
 
 html {
@@ -58,7 +58,7 @@ body {
 .navbar a {
     font-size: 2rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 3rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -71,7 +71,7 @@ body {
 }
 
 #menu-icon {
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--main-color);
     display: none;
 }
@@ -108,11 +108,11 @@ span {
 .home-content h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .home-content h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
@@ -128,8 +128,8 @@ span {
     width: 32vw;
     border-radius: 50px;
 background: linear-gradient(145deg, var(--main-color), var(--main-color));
-box-shadow:  18px 18px 36px var(--main-color),
-             -18px -18px 36px var(--main-color);
+box-shadow:  18px 18px 36px var(--text-color),
+             -18px -18px 36px var(--second-bg-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
@@ -141,7 +141,7 @@ box-shadow:  18px 18px 36px var(--main-color),
 }
 
 .home-content p {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -163,10 +163,10 @@ box-shadow:  18px 18px 36px var(--main-color),
 }
 
 .social-icons a:hover {
-    color: var(--main-color);
-    transform: scale(1.3) translateY(-5px); /* Corrected 'scale(1.3)translateY' */
-    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.3)translateY(-5px);
     background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
 }
 
 .btn {
@@ -185,7 +185,7 @@ box-shadow:  18px 18px 36px var(--main-color),
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
     box-shadow: 0 0 50px var(--main-color);
 }
 
@@ -199,7 +199,8 @@ box-shadow:  18px 18px 36px var(--main-color),
     background-color: black;
     color: var(--main-color);
     border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px transparent; /* Fixed typo 'box shadow' */
+    box-shadow: 0 0 25px transparent; 
+    box-shadow: 0 0 50px var(--main-color);
 }
 
 .btn-group a:nth-last-of-type(2):hover {
@@ -268,7 +269,7 @@ box-shadow:  18px 18px 36px var(--main-color),
     }
 }
 .heading{
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
     margin: 5rem 0;
 }
@@ -323,7 +324,7 @@ box-shadow:  18px 18px 36px var(--main-color),
 .timeline-date{
     font-size: 20px;
     font-weight: 800;
-    color: white;
+    color: var(--main-color));
     margin: 6px 0 15px;
 }
 .timeline-content{
@@ -382,9 +383,11 @@ box-shadow:  18px 18px 36px var(--main-color),
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    box-shadow:  18px 18px 36px var(--text-color),
+             -18px -18px 36px var(--second-bg-color);
 }
 .service-box:hover {
-    background: white;
+    background: var(--second-bg-color);
     color: var(--main-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
@@ -434,7 +437,7 @@ box-shadow:  18px 18px 36px var(--main-color),
 .testimonial-item{
     min-height: 550px;
     max-width: 450px;
-    background: rgb(1, 0, 0);
+    background: var(--main-color);
     border: 3px solid rgb(238, 238, 238, 0.2);
     border-radius: 2rem;
     margin: 0 2rem;
@@ -446,13 +449,16 @@ box-shadow:  18px 18px 36px var(--main-color),
     justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    color: white;
+    color: whitesmoke;
     transition: 0.4s ease-in-out;
+    box-shadow: -18px -18px 36px var(--text-color);
 }
 .testimonial-item:hover{
-    border: 3px solid var(--main-color);
+    border: 3px solid var(--text-color);
     transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 50px black;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 .testimonial-item h2{
     font-size: 2.8rem;
@@ -649,4 +655,5 @@ box-shadow:  18px 18px 36px var(--main-color),
     .services-container{
         grid-template-columns: repeat(1,1fr);
     }
+
 }
